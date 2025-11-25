@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion et Inscription - Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box" id="login-box">
+            <h2>Connexion</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Mot de passe</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <div class="user-type-selection">
+                    <label>
+                        <input type="radio" name="user-type" value="client" checked> Client
+                    </label>
+                    <label>
+                        <input type="radio" name="user-type" value="artisan"> Artisan
+                    </label>
+                </div>
+                <div class="options">
+                    <label>
+                        <input type="checkbox" id="remember-me"> Se souvenir de moi
+                    </label>
+                    <a href="#" id="forgot-password-link">Mot de passe oublié ?</a>
+                </div>
+                <button type="submit" class="btn">Se connecter</button>
+            </form>
+            <p class="switch-form">Pas encore de compte ? <a href="#" id="show-register">S'inscrire</a></p>
+        </div>
+
+        <div class="form-box hidden" id="register-box">
+            <h2>Inscription</h2>
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-password">Mot de passe</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-confirm-password">Confirmer le mot de passe</label>
+                    <input type="password" id="register-confirm-password" required>
+                </div>
+                <div class="user-type-selection">
+                    <label>
+                        <input type="radio" name="register-user-type" value="client" checked> Je suis un Client
+                    </label>
+                    <label>
+                        <input type="radio" name="register-user-type" value="artisan"> Je suis un Artisan
+                    </label>
+                </div>
+                <button type="submit" class="btn">S'inscrire</button>
+            </form>
+            <p class="switch-form">Déjà un compte ? <a href="#" id="show-login">Se connecter</a></p>
+        </div>
+
+        <div class="form-box hidden" id="forgot-password-box">
+            <h2>Mot de passe oublié</h2>
+            <form id="forgot-password-form">
+                <p>Entrez votre adresse e-mail pour recevoir un lien de réinitialisation.</p>
+                <div class="input-group">
+                    <label for="forgot-email">Email</label>
+                    <input type="email" id="forgot-email" required>
+                </div>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+            <p class="switch-form"><a href="#" id="back-to-login">Retour à la connexion</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
