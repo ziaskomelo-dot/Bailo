@@ -10,55 +10,73 @@ export const Footer: FC = () => {
   ];
 
   return (
-    <header class="header header-6">
-      <div class="navbar-area">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-12">
-              <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="/">
-                  <img src="assets/img/logo/BAILO.png" alt="Logo" width="100" height="100" />
-                </a>
-
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent6"
-                  aria-controls="navbarSupportedContent6"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="toggler-icon"></span>
-                  <span class="toggler-icon"></span>
-                  <span class="toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent6">
-                  <ul id="nav6" class="navbar-nav ms-auto">
-                    {links.map((link) => (
-                      <li class="nav-item" key={link.href}>
-                        <a class="page-scroll" href={link.href}>
-                          {link.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+    <footer class="footer footer-style-4">
+      <div class="container">
+        <div class="widget-wrapper">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <div class="footer-widget wow fadeInUp" data-wow-delay=".2s">
+                <div class="logo">
+                  <a href="#home"> <img src="assets/img/logo/BAILO.png" alt="" width="100" height="100" /> </a>
                 </div>
-
-                <div class="header-action d-flex">
-                  <a href="login.php"> <i class="lni lni-alarm"></i> </a>
-                  <div class="d-flex">
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
-                      Connexion
-                    </button>
-                  </div>
-                </div>
-              </nav>
+                <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis nulla placerat amet
+                  amet congue.</p>
+                <ul class="socials">
+                  <li> <a href="#0"> <i class="lni lni-facebook-filled"></i> </a> </li>
+                  <li> <a href="#0"> <i class="lni lni-twitter-filled"></i> </a> </li>
+                  <li> <a href="#0"> <i class="lni lni-instagram-filled"></i> </a> </li>
+                  <li> <a href="#0"> <i class="lni lni-linkedin-original"></i> </a> </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6 col-sm-6">
+              <div class="footer-widget wow fadeInUp" data-wow-delay=".3s">
+                <h6>Quick Link</h6>
+                <ul class="links">
+                  <li> <a href="#home">Home</a> </li>
+                  <li> <a href="#">About</a> </li>
+                  <li> <a href="#0">Service</a> </li>
+                  <li> <a href="#0">Testimonial</a> </li>
+                  <li> <a href="#0">Contact</a> </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div class="footer-widget wow fadeInUp" data-wow-delay=".4s">
+                <h6>Services</h6>
+                <ul class="links">
+                  <li> <a href="#0">Menuisier</a> </li>
+                  <li> <a href="#0">Maçon</a> </li>
+                  <li> <a href="#0">Electricien</a> </li>
+                  <li> <a href="#0">Peintre</a> </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6">
+              <div class="footer-widget wow fadeInUp" data-wow-delay=".5s">
+                <h6>Download App</h6>
+                <ul class="download-app">
+                  <li>
+                    <a href="#0">
+                      <span class="icon"><i class="lni lni-apple"></i></span>
+                      <span class="text">Download on the <b>App Store</b> </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#0">
+                      <span class="icon"><i class="lni lni-play-store"></i></span>
+                      <span class="text">GET IT ON <b>Play Store</b> </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+        <div class="copyright-wrapper wow fadeInUp" data-wow-delay=".2s">
+          <p>© 2025 Bailo. All rights reserved.</p>
+        </div>
       </div>
-    </header>
+    </footer>
   )
 }
