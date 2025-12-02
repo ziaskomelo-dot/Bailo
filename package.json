@@ -1,11 +1,26 @@
 {
   "name": "bailo",
   "type": "module",
+  "scripts": {
+    "dev": "vc dev",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "db:seed": "tsx prisma/seed.ts",
+    "postinstall": "prisma generate"
+  },
   "dependencies": {
-    "hono": "^4.10.7"
+    "@prisma/adapter-pg": "^7.0.1",
+    "@prisma/client": "^7.0.1",
+    "dotenv": "^17.2.3",
+    "hono": "^4.10.7",
+    "pg": "^8.16.3"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
+    "@types/pg": "^8.15.6",
+    "prisma": "^7.0.1",
     "tsx": "^4.7.1",
     "typescript": "^5.8.3",
     "vercel": "^48.12.0"

@@ -1,0 +1,131 @@
+generator client {
+  provider = "prisma-client"
+  output   = "generated"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String
+  role      Role     @default(CLIENT)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  artisanProfile Artisan?
+  requests       Request[]  @relation("ClientRequests")
+  reviews        Review[]
+
+  @@map("users")
+}
+
+model Artisan {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bio         String?
+  phone       String?
+  address     String?
+  city        String?
+  isVerified  Boolean  @default(false)
+  rating      Float    @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  services  Service[]
+  requests  Request[] @relation("ArtisanRequests")
+  quotes    Quote[]
+
+  @@map("artisans")
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  price       Float?
+  category    String
+  artisanId   String
+  artisan     Artisan  @relation(fields: [artisanId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  requests Request[]
+
+  @@map("services")
+}
+
+model Request {
+  id          String        @id @default(cuid())
+  clientId    String
+  client      User          @relation("ClientRequests", fields: [clientId], references: [id], onDelete: Cascade)
+  artisanId   String
+  artisan     Artisan       @relation("ArtisanRequests", fields: [artisanId], references: [id], onDelete: Cascade)
+  serviceId   String
+  service     Service       @relation(fields: [serviceId], references: [id])
+  description String?
+  status      RequestStatus @default(PENDING)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  // Relations
+  quotes Quote[]
+  review Review?
+
+  @@map("requests")
+}
+
+model Quote {
+  id          String      @id @default(cuid())
+  requestId   String
+  request     Request     @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  artisanId   String
+  artisan     Artisan     @relation(fields: [artisanId], references: [id], onDelete: Cascade)
+  amount      Float
+  description String?
+  status      QuoteStatus @default(PENDING)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@map("quotes")
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  requestId String   @unique
+  request   Request  @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  rating    Int
+  comment   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("reviews")
+}
+
+enum Role {
+  CLIENT
+  ARTISAN
+  ADMIN
+}
+
+enum RequestStatus {
+  PENDING
+  ACCEPTED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum QuoteStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
