@@ -13,7 +13,7 @@
 		document.querySelector('.preloader').style.display = 'none';
 	}
 
-    // =========== sticky menu 
+    // =========== sticky menu
     window.onscroll = function () {
         var header_navbar = document.querySelector(".hero-section-wrapper-5 .header");
         var sticky = header_navbar.offsetTop;
@@ -68,7 +68,7 @@
 	};
 
     window.document.addEventListener('scroll', onScroll);
-    
+
 
     // ===== pricing-style-4 slider
     tns({
