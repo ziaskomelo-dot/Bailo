@@ -83,7 +83,7 @@
                   </div>
                   
                   <div class="header-action d-flex">
-                    <a href="#0"> <i class="lni lni-alarm"></i> </a>
+                    <a href="login.php"> <i class="lni lni-alarm"></i> </a>
                     <div class="d-flex">
                       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Connexion</button>
                     </div>
@@ -136,59 +136,7 @@
             </div>
           </div>
         </div>
-      <!-- recheche et trouvez artisan --
-          <div class="row g-3 justify-content-center">
-              <div class="col-md-6">
-                  <div class="input-group mb-3">
-                      <input type="text" class="form-control form-control-lg" placeholder="Trouvez un artisan" id="search-artisan">
-                      <select class="form-select form-select-lg" name="artisan" id="select-artisan">
-                          <option value="">Sélectionnez un artisan</option>
-                          <option value="menuisier">Menuisier</option>
-                          <option value="plombier">Plombier</option>
-                          <option value="electricien">Électricien</option>
-                          <option value="peintre">Peintre</option>
-                          <option value="peintre">Maçon</option>
-                          <option value="peintre">Couturier</option>
-                          <option value="peintre">Jarinier</option>
-                          <option value="peintre">Autre...</option>
-                      </select>
-                  </div>
-                  <div class="input-group">
-                      <input type="text" class="form-control form-control-lg" placeholder="Votre ville ou adresse" id="location-input">
-                      <button class="btn btn-outline-secondary btn-lg" type="button" id="geolocate-btn">📍 Localiser</button>
-                      <button class="btn btn-primary btn-lg" id="search-btn">Recherche</button>
-                  </div>
-              </div>
-          </div>--->
-
-          <!-- Script JavaScript pour la géolocalisation --
-          <script>
-              document.getElementById('geolocate-btn').addEventListener('click', function() {
-                  if (navigator.geolocation) {
-                      navigator.geolocation.getCurrentPosition(function(position) {
-                          const lat = position.coords.latitude;
-                          const lon = position.coords.longitude;
-                          // Ici, tu peux afficher les coordonnées ou les envoyer à un serveur
-                          document.getElementById('location-input').value = `Latitude: ${lat}, Longitude: ${lon}`;
-                          alert(`Position détectée : ${lat}, ${lon}. Utilise ces données pour rechercher des artisans proches.`);
-                      }, function(error) {
-                          alert('Erreur de géolocalisation : ' + error.message);
-                      });
-                  } else {
-                      alert('La géolocalisation n\'est pas supportée par ce navigateur.');
-                  }
-              });
-
-              // Exemple d'événement sur le bouton Recherche (à personnaliser)
-              document.getElementById('search-btn').addEventListener('click', function() {
-                  const artisan = document.getElementById('select-artisan').value;
-                  const location = document.getElementById('location-input').value;
-                  const search = document.getElementById('search-artisan').value;
-                  console.log('Recherche :', { search, artisan, location });
-                  // Ici, envoie les données à un serveur ou API pour traiter la recherche
-              });
-          </script><br><br> --->
-
+    
 
         <!-- 1 -->
         <div class="row">
@@ -286,7 +234,8 @@
                 </div>
               </div>
             </div>
-        </div>
+        </div> 
+         <a href="service.html" class="button button-lg radius-10 wow fadeInUp" data-wow-delay=".5s">Voir les services</a>
       </div>
     </section>
     <!-- ========================= feature style-5 end ========================= -->
@@ -380,7 +329,6 @@
                     <a href="artisan.html" class="button radius-30">Commencer</a>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -433,8 +381,8 @@
         <div class="row justify-content-center">
           <div class="col-xxl-5 col-xl-5 col-lg-7 col-md-10">
             <div class="section-title text-center mb-50">
-              <h3 class="mb-15">Get in touch</h3>
-              <p>Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p>
+              <h3 class="mb-15">Votre besoin, notre priorité.</h3>
+              <p>Besoin d’aide ? Laissez-nous un mot, nous sommes là pour vous accompagner. Remplissez le formulaire ci-dessous et nous vous recontactons rapidement.</p>
             </div>
           </div>
         </div>
@@ -464,7 +412,7 @@
                   <div class="col-md-6">
                     <div class="single-input">
                       <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject">
-                      <i class="lni lni-text-format"></i>
+                      <i class="lni lni-comments"></i>
                     </div>
                   </div>
                   <div class="col-md-12">
@@ -481,7 +429,6 @@
                 </div>
               </form>
             </div>
-
           </div>
 
           <div class="col-lg-4">
@@ -493,8 +440,8 @@
                       <i class="lni lni-phone"></i>
                     </div>
                     <div class="text">
-                      <p>0045939863784</p>
-                      <p>+229 7 9232 4333</p>
+                      <p>Tel</p>
+                      <p>+229 7 1234 5678</p>
                     </div>
                   </div>
                 </div>
@@ -504,8 +451,8 @@
                       <i class="lni lni-envelope"></i>
                     </div>
                     <div class="text">
+                      <p>Mail</p>
                       <p>bailomail@gmail.com</p>
-                      <p>Bailo@yourwebsite.com</p>
                     </div>
                   </div>
                 </div>
@@ -566,7 +513,7 @@
                 <h6>Quick Link</h6>
                 <ul class="links">
                   <li> <a href="#home">Home</a> </li>
-                  <li> <a href="#0">About</a> </li>
+                  <li> <a href="#">About</a> </li>
                   <li> <a href="#0">Service</a> </li>
                   <li> <a href="#0">Testimonial</a> </li>
                   <li> <a href="#0">Contact</a> </li>
@@ -606,9 +553,9 @@
           </div>
         </div>
         <div class="copyright-wrapper wow fadeInUp" data-wow-delay=".2s">
-          <p>Design and Developed by <a href="https://uideck.com" rel="nofollow" target="_blank">UIdeck</a> Built-with <a href="https://uideck.com" rel="nofollow" target="_blank">Lindy UI Kit</a>. Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
+          <p>© 2025 Bailo. All rights reserved.</p>
         </div>
-      </div>
+       </div>
     </footer>
     <!-- ========================= footer style-4 end ========================= -->
 
@@ -634,7 +581,7 @@
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-client" role="tabpanel">
-                            <form>
+                            <form>             
                                 <div class="mb-3">
                                     <label for="clientName" class="form-label">Nom complet</label>
                                     <input type="text" class="form-control" id="clientName" required>
