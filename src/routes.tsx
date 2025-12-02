@@ -1,11 +1,11 @@
 import { Hono } from 'hono'
 
-import artisans from './api/artisans.js'
-import services from './api/services.js'
-import users from './api/users.js'
-import requests from './api/requests.js'
-import reviews from './api/reviews.js'
-import quotes from './api/quotes.js'
+import artisans from './services/artisans.js'
+import services from './services/services.js'
+import users from './services/users.js'
+import requests from './services/requests.js'
+import reviews from './services/reviews.js'
+import quotes from './services/quotes.js'
 
 import { HomePage } from './pages/home.js'
 import { ErrorPage } from './pages/500.js'
