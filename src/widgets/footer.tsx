@@ -1,13 +1,7 @@
 import { FC } from "hono/jsx";
 
 export const Footer: FC = () => {
-  const links = [
-    { label: "Home", href: "#home" },
-    { label: "Services", href: "#service" },
-    { label: "Pricing", href: "#artisan" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
-  ];
+
 
   return (
     <footer class="footer footer-style-4">

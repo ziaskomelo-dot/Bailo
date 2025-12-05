@@ -282,22 +282,22 @@ export const HomePage: FC = () => {
             <div class="col-xl-5 col-lg-6">
               <div class="about-content-wrapper">
                 <div class="section-title mb-30">
-                  <h3 class="mb-25 wow fadeInUp" data-wow-delay=".2s">The future of designing starts here</h3>
-                  <p class="wow fadeInUp" data-wow-delay=".3s">Stop wasting time and money designing and managing a website
-                    that doesn’t get results. Happiness guaranteed,</p>
+                  <h3 class="mb-25 wow fadeInUp" data-wow-delay=".2s">À propos de notre plateforme</h3>
+                  <p class="wow fadeInUp" data-wow-delay=".3s">Notre plateforme est une marketplace moderne dédiée aux artisans et aux services locaux, 
+                    conçue pour faciliter la mise en relation entre les professionnels qualifiés et les clients à la recherche d’un service fiable, rapide et de qualité.</p>
                 </div>
                 <ul>
                   <li class="wow fadeInUp" data-wow-delay=".35s">
                     <i class="lni lni-checkmark-circle"></i>
-                    Stop wasting time and money designing and managing a website that doesn’t get results.
+                    Notre plateforme connecte les clients aux meilleurs artisans locaux.
                   </li>
                   <li class="wow fadeInUp" data-wow-delay=".4s">
                     <i class="lni lni-checkmark-circle"></i>
-                    Stop wasting time and money designing and managing.
+                    Les clients trouvent un service fiable, les artisans gagnent en visibilité.
                   </li>
                   <li class="wow fadeInUp" data-wow-delay=".45s">
                     <i class="lni lni-checkmark-circle"></i>
-                    Stop wasting time and money designing and managing a website that doesn’t get results.
+                    Un espace simple, professionnel où qualité et satisfaction sont au cœur de chaque service.
                   </li>
                 </ul>
                 <a href="apropo.html" class="button button-lg radius-10 wow fadeInUp" data-wow-delay=".5s">Voir plus</a>
